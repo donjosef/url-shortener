@@ -9,7 +9,7 @@ const redirectRoute = require('./routes/redirect')
 const app = express()
 
 app.use(cors({
-    origin: 'https://donjosef.github.io/url-shortner-client'
+    origin: 'https://donjosef.github.io'
 }))
 app.use(express.json())
 
