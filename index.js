@@ -1,12 +1,14 @@
 require('dotenv').config()
 
 const express = require('express')
+const cors = require('cors')
 const connectToDB = require('./dbconnection')
 const urlRouter = require('./routes/url')
 const redirectRoute = require('./routes/redirect')
 
 const app = express()
 
+app.use(cors())
 app.use(express.json())
 
 app.use('/', redirectRoute)
