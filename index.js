@@ -14,7 +14,7 @@ app.use(express.json())
 app.use('/', redirectRoute)
 app.use('/api/url', urlRouter)
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 4000
 
 app.listen(PORT, () => {
     connectToDB()
