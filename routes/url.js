@@ -29,8 +29,9 @@ router.post('/shorten', async (req, res) => {
         }
 
     } else {
+        const error = new Error('Please insert a valid URL')
         res.status(422).json({
-            message: 'Please insert a valid URL'
+            error: error.message
         })
     }
 
