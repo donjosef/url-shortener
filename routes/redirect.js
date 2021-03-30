@@ -11,12 +11,15 @@ router.get('/:code', async (req, res) => {
     if(url) {
       res.redirect(url.longUrl)
     } else {
-      res.status(404).json('Url not found')
+      res.status(404).json({
+        error: 'Url not found'
+      })
     }
 
   } catch(err) {
-    console.log(err)
-    res.status(500).json('Server erro')
+    res.status(500).json({
+      error: 'Server error'
+    })
   }
 })
 
